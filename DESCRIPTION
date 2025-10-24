@@ -1,9 +1,11 @@
 Package: paquetemeteorologico
-Title: What the Package Does (One Line, Title Case)
+Title: Contiene funciones especificas para realizar tareas sobre meteorologia
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Juan Martín", "Bongiovanni", , "jmbongiovanni@mail.austral.edu.ar", role = c("aut", "cre")),
+    person("Lisandro Nicolas", "Seghezzo Prieri", , "lseghezzo@mail.austral.edu.ar", role = c("aut", "cre"))
+Description: En este paquete se encontraran funciones para resolver problemas 
+    de la meteorologia u otro hambito relacionada a esta.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
