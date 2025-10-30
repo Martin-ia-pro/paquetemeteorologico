@@ -1,11 +1,16 @@
-#' Lee archivos sobre estaciones meteorológicas
+#' @title Descarga y lee los datos de archivos de estaciones meteorológicas
 #'
-#' La funcion leer_estaciones sirve para descargar y leer los datos de estaciones a partir de su ID. Tambien debe proporcionarse la ruta en donde se descargara el archivo de los datos de la estacion
+#' @description
+#' Descarga un archivo formato CSV con  datos de una estación meteorológica
+#' específica y lo guarda en una ruta local. Si el archivo ya existe en la ruta especificada, la función lo lee directamente
+#' sin volver a descargarlo.
 #'
-#' @param id_estacion ID de la estación cuyos datos se quieren leer
+#' Requiere los paquetes `glue`, `readr` y `cli`.
+#'
+#' @param id_estacion ID de la estación cuyos datos se quieren leer.
 #' @param ruta Ruta o directorio en donde se descargarán y leeran los datos
 #'
-#' @returns Los datos en forma de .csv para poder almacenarlos en una variable y utilizarlos
+#' @returns Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
 #'
 #' @examples
 #' leer_estaciones("NH0437","datos/NH0437.csv")
