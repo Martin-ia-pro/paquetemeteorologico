@@ -7,7 +7,7 @@
 #' Requiere los paquetes `glue`, `readr` y `cli`.
 #'
 #' @param id_estacion ID de la estación cuyos datos se quieren leer.
-#' @param ruta Ruta o directorio en donde se descargarán y leeran los datos
+#' @param ruta Ruta o directorio en donde se descargarán y leerán los datos
 #'
 #' @returns Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
 #'
