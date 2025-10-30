@@ -21,7 +21,7 @@ cada estación (\code{id}) con las siguientes columnas de resumen:
 \code{id}, \code{Max}, \code{Min}, \code{Promedio}, y \code{Desvio_Estandar}.
 }
 \description{
-Calcula un resumen estadistico clave para la columna de temperatura
+Calcula un resumen estadístico clave para la columna de temperatura
 (\code{temperatura_abrigo_150cm}) en el conjunto de datos de una o varias estaciones.
 }
 \details{

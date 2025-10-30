@@ -9,7 +9,7 @@ leer_estaciones(id_estacion, ruta)
 \arguments{
 \item{id_estacion}{ID de la estación cuyos datos se quieren leer.}
 
-\item{ruta}{Ruta o directorio en donde se descargarán y leeran los datos}
+\item{ruta}{Ruta o directorio en donde se descargarán y leerán los datos}
 }
 \value{
 Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.

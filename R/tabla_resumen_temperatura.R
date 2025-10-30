@@ -1,6 +1,6 @@
 #' Resumen Estadístico de Temperaturas por Estación
 #'
-#' Calcula un resumen estadistico clave para la columna de temperatura
+#' Calcula un resumen estadístico clave para la columna de temperatura
 #' (`temperatura_abrigo_150cm`) en el conjunto de datos de una o varias estaciones.
 #'
 #' La tabla de salida incluye la temperatura máxima, mínima, promedio y la
