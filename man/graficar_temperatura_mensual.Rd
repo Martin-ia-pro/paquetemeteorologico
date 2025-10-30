@@ -2,7 +2,7 @@
 % Please edit documentation in R/graficar_temperatura_mensual.R
 \name{graficar_temperatura_mensual}
 \alias{graficar_temperatura_mensual}
-\title{Gráfico de Temperatura Promedio Mensual}
+\title{Gráfico de Líneas de Temperatura Promedio Mensual}
 \usage{
 graficar_temperatura_mensual(
   datos,
@@ -11,17 +11,34 @@ graficar_temperatura_mensual(
 )
 }
 \arguments{
-\item{datos}{tibble o dataset al cual se le quiere realizar el gráfico de la temperatura promedio mensual.}
+\item{datos}{Se hace uso de las siguientes columnas del dataset proporcionado:
+\itemize{
+\item \code{id}: Identificador de la estación.
+\item \code{fecha}: Fecha de la medición.
+\item \code{temperatura_abrigo_150cm}: Columna con los valores de temperatura.
+}}
 
-\item{colores}{colores con los que se quiere que aparezca la temperatura en el gráfico de linea.}
+\item{colores}{Un vector de colores que se utilizará para
+diferenciar las líneas de las estaciones (\code{id}). Por defecto, es un vector
+con cinco colores.}
 
-\item{titulo}{frase o palabra que se desea poner de titulo en el gráfico.}
+\item{titulo}{La cadena de texto que se desea utilizar como
+título principal del gráfico generado.Por defecto, es "Temperatura Mensual".}
 }
 \value{
-imagen de un gráfico de lineas.
+Un objeto de la clase \code{ggplot} que representa
+el gráfico de líneas de la temperatura promedio mensual. Este objeto puede
+ser impreso o guardado.
 }
 \description{
-La función graficar_temperatura_mensual sirve para graficar el promedio de la temperatura mensual del dataset proporcionado
+Genera un gráfico de líneas (ggplot2) que visualiza la temperatura promedio
+mensual a partir del conjunto de datos de estaciones meteorológicas proporcionados.
+
+Esta función agrupa los datos por estación (\code{id}) y mes, calcula el promedio
+de la temperatura, y luego crea el gráfico.
+
+Requiere las librerías \code{dplyr} (para manipulacion de datos), \code{lubridate} (para
+manejo de fechas) y \code{ggplot2} (para la creación del gráfico).
 }
 \examples{
 graficar_temperatura_mensual(estaciones_unidas,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
