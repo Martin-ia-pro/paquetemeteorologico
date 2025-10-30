@@ -17,11 +17,14 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(paquetemeteorologico)
 ```
+
 ## Introducción al paquete paquetemeteorologico
+
 El paquete `paquetemeteorologico` proporciona herramientas para la lectura,manipulacion y visualizacion de los datos de estaciones meteorológicas. En esta introducción, exploraremos algunas de las funcionalidades basicas del paquete.
 
-### Descarga y lectura de datos meteorologicos
-El paquete incluye funciones para descargar y leer datos de estaciones meteorologicas A continuacion, se muestra un ejemplo de cómo descargar y leer datos meteorológicos utilizando la funcion `leer_estaciones()`.
+### Descarga y lectura de datos meteorológicos
+
+El paquete incluye funciones para descargar y leer datos de estaciones meteorológicas A continuación, se muestra un ejemplo de cómo descargar y leer datos meteorológicos utilizando la función `leer_estaciones()`.
 
 ```{r}
 # Descargar y leer datos meteorologicos de una estacion específica
@@ -33,8 +36,10 @@ leer_estaciones("NH0910","../datos/NH0910.csv")
 estacion_1 <- leer_estaciones("NH0437","../datos/NH0437.csv")
 ```
 
-### Resumen de datos meteorologicos
-El paquete tambien ofrece funciones para resumir datos meteorologicos. A continuacion, se muestra un ejemplo de como crear un resumen de la temperatura promedio mensual utilizando la funcion `tabla_resumen_temperatura()`.
+### Resumen de datos meteorológicos
+
+El paquete también ofrece funciones para resumir datos meteorológicos. A continuación, se muestra un ejemplo de como crear un resumen de la temperatura promedio mensual utilizando la función `tabla_resumen_temperatura()`.
+
 ```{r}
 # Crear un resumen de la temperatura promedio mensual para las estaciones leidas
 
@@ -44,8 +49,10 @@ tabla_resumen_temperatura(estacion_1)
 
 ```
 
-### Visualización de datos meteorologicos
-El paquete tambien ofrece funciones para visualizar datos meteorológicos. A continuacion, se muestra un ejemplo de como graficar la temperatura mensual utilizando la funcion `graficar_temperatura_mensual()`.
+### Visualización de datos meteorológicos
+
+El paquete también ofrece funciones para visualizar datos meteorológicos. A continuación, se muestra un ejemplo de como graficar la temperatura mensual utilizando la función `graficar_temperatura_mensual()`.
+
 ```{r}
 # Graficar la temperatura mensual de una estacion específica
 
@@ -53,11 +60,11 @@ El paquete tambien ofrece funciones para visualizar datos meteorológicos. A con
 
 # graficar_temperatura_mensual(estaciones_unidas,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 ```
+
 ### Documentación adicional
 
-Podes explorar la documentacion de cada funcion en detalle usando la ayuda de R:
+Podes explorar la documentación de cada función en detalle usando la ayuda de R:
 
-* `?leer_estaciones`
-* `?tabla_resumen_temperatura`
-* `?graficar_temperatura_mensual`
-
+-   `?leer_estaciones`
+-   `?tabla_resumen_temperatura`
+-   `?graficar_temperatura_mensual`
