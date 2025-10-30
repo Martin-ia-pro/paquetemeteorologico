@@ -15,9 +15,10 @@ Authors@R: c(
         role = "aut"
     )
   )
-Description: En este paquete se encontraran funciones para resolver problemas 
-    de la meteorologia u otro hambito relacionada a esta. Proporciona un conjunto de 
-    herramientas para la lectura, manipulación y visualización de los datos.
+Description: Este paquete contiene funciones para resolver problemas 
+    relacionados con la meteorología y otras áreas afines. 
+    Proporciona un conjunto de herramientas para la lectura, 
+    manipulación y visualización de datos meteorológicos.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
