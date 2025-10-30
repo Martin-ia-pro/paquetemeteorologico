@@ -1,6 +1,6 @@
 #' Gráfico de Temperatura Promedio Mensual
 #'
-#' La funcion graficar_temperatura_mensual sirve para graficar el promedio de la temperatura mensual del dataset proporcionado
+#' La función graficar_temperatura_mensual sirve para graficar el promedio de la temperatura mensual del dataset proporcionado
 #'
 #' @param datos tibble o dataset al cual se le quiere realizar el gráfico de la temperatura promedio mensual.
 #' @param colores colores con los que se quiere que aparezca la temperatura en el gráfico de linea.
