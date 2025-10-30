@@ -1,14 +1,30 @@
-#' Tabla con un resumen numérico de las temperaturas de una estación
+#' @title Resumen Estadístico de Temperaturas por Estación
 #'
-#' La función tabla_resumen_temperatura devuelve un resumen numérico de las temperaturas de una estacion, la cual se pasa como parámetro. Esta tabla contiene: temperatura máxima, temperatura mínima, temperatura promedio y su desvio estandar.
+#' @description
+#' Calcula un resumen estadistico clave para la columna de temperatura
+#' (`temperatura_abrigo_150cm`) en el conjunto de datos de una o varias estaciones.
 #'
-#' @param estacion tibble o data.frame con los datos a lo que se les va a realizar el resumen numérico
+#' La tabla de salida incluye la temperatura máxima, mínima, promedio y la
+#' desviación estándar. Los cálculos se agrupan por el identificador de la
+#' estación (`id`).
 #'
-#' @returns tibble o data.frame con el mínimo, máximo, promedio y desvio estandar de la temperatura
+#' Esta función requiere el paquete `dplyr` para la manipulación de datos.
+#'
+#' @param estacion El conjunto de datos de estaciones
+#'   meteorológicas o de una estacion en especifico. Se utilizaran las columnas:
+#'   \itemize{
+#'     \item `id`: Identificador de la estacion.
+#'     \item `temperatura_abrigo_150cm`: Columna con los valores de temperatura
+#'           utilizados para los cálculos.
+#'   }
+#'
+#' @returns Un objeto tibble que contiene una fila por
+#'   cada estación (`id`) con las siguientes columnas de resumen:
+#'   `id`, `Max`, `Min`, `Promedio`, y `Desvio_Estandar`.
 #'
 #' @examples
-#' tabla_resumen_temperatura(estacion_1) # estacion_1 <- read.csv("datos/estacion_1.csv")
-#' tabla_resumen_temperatura(estacion_2) # estacion_2 <- read.csv("datos/estacion_2.csv")
+#' tabla_resumen_temperatura(estacion_1)
+#' tabla_resumen_temperatura(datos_combinados)
 #'
 #' @export
 tabla_resumen_temperatura <- function(estacion) {
@@ -17,6 +33,6 @@ tabla_resumen_temperatura <- function(estacion) {
     summarise(Max = max(temperatura_abrigo_150cm, na.rm=TRUE),
               Min = min(temperatura_abrigo_150cm, na.rm=TRUE),
               Promedio = mean(temperatura_abrigo_150cm, na.rm=TRUE),
-              temperatura_promedio_abrigo_150cm=sd(temperatura_abrigo_150cm, na.rm=TRUE))
+              Desvio_Estandar=sd(temperatura_abrigo_150cm, na.rm=TRUE))
 
 }

@@ -2,21 +2,36 @@
 % Please edit documentation in R/tabla_resumen_temperatura.R
 \name{tabla_resumen_temperatura}
 \alias{tabla_resumen_temperatura}
-\title{Tabla con un resumen numérico de las temperaturas de una estación}
+\title{Resumen Estadístico de Temperaturas por Estación}
 \usage{
 tabla_resumen_temperatura(estacion)
 }
 \arguments{
-\item{estacion}{tibble o data.frame con los datos a lo que se les va a realizar el resumen numérico}
+\item{estacion}{El conjunto de datos de estaciones
+meteorológicas o de una estacion en especifico. Se utilizaran las columnas:
+\itemize{
+\item \code{id}: Identificador de la estacion.
+\item \code{temperatura_abrigo_150cm}: Columna con los valores de temperatura
+utilizados para los cálculos.
+}}
 }
 \value{
-tibble o data.frame con el mínimo, máximo, promedio y desvio estandar de la temperatura
+Un objeto tibble que contiene una fila por
+cada estación (\code{id}) con las siguientes columnas de resumen:
+\code{id}, \code{Max}, \code{Min}, \code{Promedio}, y \code{Desvio_Estandar}.
 }
 \description{
-La función tabla_resumen_temperatura devuelve un resumen numérico de las temperaturas de una estacion, la cual se pasa como parámetro. Esta tabla contiene: temperatura máxima, temperatura mínima, temperatura promedio y su desvio estandar.
+Calcula un resumen estadistico clave para la columna de temperatura
+(\code{temperatura_abrigo_150cm}) en el conjunto de datos de una o varias estaciones.
+
+La tabla de salida incluye la temperatura máxima, mínima, promedio y la
+desviación estándar. Los cálculos se agrupan por el identificador de la
+estación (\code{id}).
+
+Esta función requiere el paquete \code{dplyr} para la manipulación de datos.
 }
 \examples{
-tabla_resumen_temperatura(estacion_1) # estacion_1 <- read.csv("datos/estacion_1.csv")
-tabla_resumen_temperatura(estacion_2) # estacion_2 <- read.csv("datos/estacion_2.csv")
+tabla_resumen_temperatura(estacion_1)
+tabla_resumen_temperatura(datos_combinados)
 
 }
