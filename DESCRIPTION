@@ -5,7 +5,8 @@ Authors@R:
     person("Juan Martín", "Bongiovanni", , "jmbongiovanni@mail.austral.edu.ar", role = c("aut", "cre")),
     person("Lisandro Nicolas", "Seghezzo Prieri", , "lseghezzo@mail.austral.edu.ar", role = c("aut", "cre"))
 Description: En este paquete se encontraran funciones para resolver problemas 
-    de la meteorologia u otro hambito relacionada a esta.
+    de la meteorologia u otro hambito relacionada a esta. Proporciona un conjunto de 
+    herramientas parea la lectura, manipulacion y visualizacion de los datos.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
