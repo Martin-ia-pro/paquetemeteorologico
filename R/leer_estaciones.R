@@ -1,6 +1,5 @@
-#' @title Descarga y lee los datos de archivos de estaciones meteorológicas
+#' Descarga y lee los datos de archivos de estaciones meteorológicas
 #'
-#' @description
 #' Descarga un archivo formato CSV con  datos de una estación meteorológica
 #' específica y lo guarda en una ruta local. Si el archivo ya existe en la ruta especificada, la función lo lee directamente
 #' sin volver a descargarlo.
@@ -11,6 +10,9 @@
 #' @param ruta Ruta o directorio en donde se descargarán y leeran los datos
 #'
 #' @returns Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
+#'
+#' @importFrom readr read_csv
+#' @importFrom cli cli_inform
 #'
 #' @examples
 #' leer_estaciones("NH0437","datos/NH0437.csv")

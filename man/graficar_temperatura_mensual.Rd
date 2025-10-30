@@ -33,7 +33,8 @@ ser impreso o guardado.
 \description{
 Genera un gráfico de líneas (ggplot2) que visualiza la temperatura promedio
 mensual a partir del conjunto de datos de estaciones meteorológicas proporcionados.
-
+}
+\details{
 Esta función agrupa los datos por estación (\code{id}) y mes, calcula el promedio
 de la temperatura, y luego crea el gráfico.
 

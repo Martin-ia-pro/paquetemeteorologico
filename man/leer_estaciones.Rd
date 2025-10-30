@@ -18,7 +18,8 @@ Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos p
 Descarga un archivo formato CSV con  datos de una estación meteorológica
 específica y lo guarda en una ruta local. Si el archivo ya existe en la ruta especificada, la función lo lee directamente
 sin volver a descargarlo.
-
+}
+\details{
 Requiere los paquetes \code{glue}, \code{readr} y \code{cli}.
 }
 \examples{

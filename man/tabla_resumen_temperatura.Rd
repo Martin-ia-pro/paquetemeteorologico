@@ -23,7 +23,8 @@ cada estación (\code{id}) con las siguientes columnas de resumen:
 \description{
 Calcula un resumen estadistico clave para la columna de temperatura
 (\code{temperatura_abrigo_150cm}) en el conjunto de datos de una o varias estaciones.
-
+}
+\details{
 La tabla de salida incluye la temperatura máxima, mínima, promedio y la
 desviación estándar. Los cálculos se agrupan por el identificador de la
 estación (\code{id}).
