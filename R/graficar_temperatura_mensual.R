@@ -25,24 +25,22 @@
 #'   el gráfico de líneas de la temperatura promedio mensual. Este objeto puede
 #'   ser impreso o guardado.
 #'
-#' @importFrom dplyr group_by summarise
-#' @importFrom lubridate floor_date date
-#' @importFrom ggplot2 ggplot aes scale_color_manual geom_line labs
-#'
 #' @examples
-#' graficar_temperatura_mensual(estaciones_unidas,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
-#' graficar_temperatura_mensual(estaciones_unidas,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+#' estacion_de_ejemplo1 <- readr::read_csv("datos/NH0437.csv")
+#' graficar_temperatura_mensual(estacion_de_ejemplo, c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
+#' estacion_de_ejemplo2 <- readr::read_csv("datos/NH0910.csv")
+#' graficar_temperatura_mensual(estacion_de_ejemplo2, c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 #'
 #' @export
 graficar_temperatura_mensual <- function(datos, colores = c("green", "blue", "red","yellow","purple"), titulo = "Temperatura Mensual"){
 
   promedio_temp <- datos |>
-    group_by(id,meses = floor_date(date(fecha), "month")) |>
-    summarise(promedio_temp_mensual = mean(temperatura_abrigo_150cm, na.rm=TRUE))
+    dplyr::group_by(id,meses = lubridate::floor_date(lubridate::date(fecha), "month")) |>
+    dplyr::summarise(promedio_temp_mensual = mean(temperatura_abrigo_150cm, na.rm = TRUE))
 
-  ggplot(data = promedio_temp)+
-    aes(y = promedio_temp_mensual, x = meses, color = id)+
-    scale_color_manual(values = colores)+
-    geom_line(size = 0.7)+
-    labs(title = titulo,x="Tiempo", y="Temperatura Promedio")
+  ggplot2::ggplot(data = promedio_temp)+
+    ggplot2::aes(y = promedio_temp_mensual, x = meses, color = id)+
+    ggplot2::scale_color_manual(values = colores)+
+    ggplot2::geom_line(size = 0.7)+
+    ggplot2::labs(title = titulo,x="Tiempo", y="Temperatura Promedio")
 }

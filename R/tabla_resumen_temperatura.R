@@ -21,19 +21,18 @@
 #'   cada estación (`id`) con las siguientes columnas de resumen:
 #'   `id`, `Max`, `Min`, `Promedio`, y `Desvio_Estandar`.
 #'
-#' @importFrom dplyr group_by summarise mutate
-#'
 #' @examples
-#' tabla_resumen_temperatura(estacion_1)
-#' tabla_resumen_temperatura(datos_combinados)
+#' tabla_resumen_temperatura("NH0437")
+#' tabla_resumen_temperatura("NH0910")
 #'
 #' @export
 tabla_resumen_temperatura <- function(estacion) {
-  estacion |>
-    group_by(id) |>
-    summarise(Max = max(temperatura_abrigo_150cm, na.rm=TRUE),
-              Min = min(temperatura_abrigo_150cm, na.rm=TRUE),
-              Promedio = mean(temperatura_abrigo_150cm, na.rm=TRUE),
-              Desvio_Estandar=sd(temperatura_abrigo_150cm, na.rm=TRUE))
+  datos_estacion <- readr::read_csv(glue::glue("datos/{estacion}.csv"))
+  datos_estacion |>
+    dplyr::group_by(id) |>
+    dplyr::summarise(Max = max(temperatura_abrigo_150cm, na.rm = TRUE),
+              Min = min(temperatura_abrigo_150cm, na.rm = TRUE),
+              Promedio = mean(temperatura_abrigo_150cm, na.rm = TRUE),
+              Desvio_Estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE))
 
 }

@@ -32,7 +32,7 @@ estación (\code{id}).
 Esta función requiere el paquete \code{dplyr} para la manipulación de datos.
 }
 \examples{
-tabla_resumen_temperatura(estacion_1)
-tabla_resumen_temperatura(datos_combinados)
+tabla_resumen_temperatura("NH0437")
+tabla_resumen_temperatura("NH0910")
 
 }
