@@ -42,7 +42,7 @@ Requiere las librerías \code{dplyr} (para manipulacion de datos), \code{lubrida
 manejo de fechas) y \code{ggplot2} (para la creación del gráfico).
 }
 \examples{
-graficar_temperatura_mensual(estaciones_unidas,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
-graficar_temperatura_mensual(estaciones_unidas,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+graficar_temperatura_mensual(NH0437, c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación NH0437")
+graficar_temperatura_mensual(NH0910, c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación NH0910")
 
 }

@@ -26,10 +26,8 @@
 #'   ser impreso o guardado.
 #'
 #' @examples
-#' estacion_de_ejemplo1 <- readr::read_csv("datos/NH0437.csv")
-#' graficar_temperatura_mensual(estacion_de_ejemplo, c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
-#' estacion_de_ejemplo2 <- readr::read_csv("datos/NH0910.csv")
-#' graficar_temperatura_mensual(estacion_de_ejemplo2, c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+#' graficar_temperatura_mensual(NH0437, c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación NH0437")
+#' graficar_temperatura_mensual(NH0910, c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación NH0910")
 #'
 #' @export
 graficar_temperatura_mensual <- function(datos, colores = c("green", "blue", "red","yellow","purple"), titulo = "Temperatura Mensual"){

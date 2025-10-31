@@ -37,3 +37,6 @@ Imports:
     glue,
     lubridate,
     readr
+Depends: 
+    R (>= 3.5)
+LazyData: true
