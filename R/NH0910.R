@@ -1,10 +1,43 @@
-#' Datos estación NH0910
+#' Datos de la estación NH0910
 #'
 #' Set de datos que contiene la información sobre la estacion NH0910
 #'
-#' @format vector.
-#'
+#' @format Un data frame con una fila por observación (distintas fechas para una estación) y las siguientes columnas:
 #' \describe{
-#' \item{datos}{númerico, de largo 1000.}
-#'}
+#'   \item{id}{Identificador de la estación.}
+#'   \item{fecha}{Fecha de la observación (clase Date).}
+#'   \item{temperatura_abrigo_150cm}{Temperatura del aire a 1,5 m (°C).}
+#'   \item{temperatura_abrigo_150cm_maxima}{Temperatura máxima a 1,5 m (°C).}
+#'   \item{temperatura_abrigo_150cm_minima}{Temperatura mínima a 1,5 m (°C).}
+#'   \item{temperatura_intemperie_5cm_minima}{Temperatura mínima al aire libre a 5 cm (°C).}
+#'   \item{temperatura_intemperie_50cm_minima}{Temperatura mínima al aire libre a 50 cm (°C).}
+#'   \item{temperatura_suelo_5cm_media}{Temperatura media del suelo a 5 cm (°C).}
+#'   \item{temperatura_suelo_10cm_media}{Temperatura media del suelo a 10 cm (°C).}
+#'   \item{temperatura_inte_5cm}{Temperatura del aire libre a 5 cm (°C).}
+#'   \item{temperatura_intemperie_150cm_minima}{Temperatura mínima al aire libre a 150 cm (°C).}
+#'   \item{humedad_suelo}{Porcentaje de humedad del suelo (%).}
+#'   \item{precipitacion_pluviometrica}{Precipitación total (mm).}
+#'   \item{granizo}{Indicador de presencia de granizo (0/1).}
+#'   \item{nieve}{Indicador de ocurrencia de nieve (0/1).}
+#'   \item{heliofania_efectiva}{Duración efectiva de la radiación solar (horas).}
+#'   \item{heliofania_relativa}{Porcentaje de heliofanía relativa (%).}
+#'   \item{tesion_vapor_media}{Tensión de vapor promedio (hPa).}
+#'   \item{humedad_media}{Humedad relativa media (%).}
+#'   \item{humedad_media_8_14_20}{Promedio de humedad a las 8, 14 y 20 h (%).}
+#'   \item{rocio_medio}{Temperatura del punto de rocío (°C).}
+#'   \item{duracion_follaje_mojado}{Duración del follaje mojado (horas).}
+#'   \item{velocidad_viento_200cm_media}{Velocidad media del viento a 2 m (m/s).}
+#'   \item{direccion_viento_200cm}{Dirección predominante del viento a 2 m (grados).}
+#'   \item{velocidad_viento_1000cm_media}{Velocidad media del viento a 10 m (m/s).}
+#'   \item{direccion_viento_1000cm}{Dirección del viento a 10 m (grados).}
+#'   \item{velocidad_viento_maxima}{Velocidad máxima registrada del viento (m/s).}
+#'   \item{presion_media}{Presión atmosférica promedio (hPa).}
+#'   \item{radiacion_global}{Radiación solar global (MJ/m²).}
+#'   \item{radiacion_neta}{Radiación neta (MJ/m²).}
+#'   \item{evaporacion_tanque}{Evaporación medida en tanque (mm).}
+#'   \item{evapotranspiracion_potencial}{Evapotranspiración potencial estimada (mm).}
+#'   \item{profundidad_napa}{Profundidad de la napa freática (m).}
+#'   \item{horas_frio}{Número de horas de frío acumuladas.}
+#'   \item{unidad_frio}{Unidades de frío acumuladas.}
+#' }
 "NH0910"
