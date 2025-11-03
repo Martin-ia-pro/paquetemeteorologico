@@ -27,12 +27,18 @@
 #'
 #' @export
 tabla_resumen_temperatura <- function(estacion) {
-  datos_estacion <- readr::read_csv(glue::glue("datos/{estacion}.csv"))
+  if (is.character(estacion)) {
+    datos_estacion <- readr::read_csv(glue::glue("datos/{estacion}.csv"))
+  } else {
+    datos_estacion <- estacion
+  }
+
   datos_estacion |>
     dplyr::group_by(id) |>
-    dplyr::summarise(Max = max(temperatura_abrigo_150cm, na.rm = TRUE),
-              Min = min(temperatura_abrigo_150cm, na.rm = TRUE),
-              Promedio = mean(temperatura_abrigo_150cm, na.rm = TRUE),
-              Desvio_Estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE))
-
+    dplyr::summarise(
+      Max = max(temperatura_abrigo_150cm, na.rm = TRUE),
+      Min = min(temperatura_abrigo_150cm, na.rm = TRUE),
+      Promedio = mean(temperatura_abrigo_150cm, na.rm = TRUE),
+      Desvio_Estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE)
+    )
 }
