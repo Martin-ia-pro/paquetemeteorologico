@@ -32,11 +32,19 @@ estacion_1 <- leer_estaciones("NH0437", "../datos/NH0437.csv")
 estacion_2 <- leer_estaciones("NH0910", "../datos/NH0910.csv")
 ```
 
+```{r}
+data("NH0910", package = "paquetemeteorologico")
+data("NH0437", package = "paquetemeteorologico")
+
+estacion_1 <- NH0910
+estacion_2 <- NH0437
+```
+
 ### Resumen de datos meteorológicos
 
 El paquete también ofrece funciones para resumir datos meteorológicos. A continuación, se muestra un ejemplo de como crear un resumen de la temperatura promedio mensual utilizando la función `tabla_resumen_temperatura()`.
 
-```{r, eval = FALSE}
+```{r}
 # Crear un resumen de la temperatura promedio mensual para las estaciones leidas
 
 tabla_resumen_temperatura(estacion_1)
@@ -47,13 +55,16 @@ tabla_resumen_temperatura(estacion_1)
 
 El paquete también ofrece funciones para visualizar datos meteorológicos. A continuación, se muestra un ejemplo de como graficar la temperatura mensual utilizando la función `graficar_temperatura_mensual()`.
 
-```{r, eval = FALSE}
+```{r}
 # Graficar la temperatura mensual de una estacion específica
 
-graficar_temperatura_mensual(estaciones_1,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
-
-graficar_temperatura_mensual(estaciones_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+graficar_temperatura_mensual(estacion_1,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
 ```
+
+```{r}
+graficar_temperatura_mensual(estacion_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+```
+
 
 ### Documentación adicional
 
