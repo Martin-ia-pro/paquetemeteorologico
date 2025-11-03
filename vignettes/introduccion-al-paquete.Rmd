@@ -26,26 +26,20 @@ El paquete `paquetemeteorologico` proporciona herramientas para la lectura,manip
 
 El paquete incluye funciones para descargar y leer datos de estaciones meteorológicas A continuación, se muestra un ejemplo de cómo descargar y leer datos meteorológicos utilizando la función `leer_estaciones()`.
 
-```{r}
-# Descargar y leer datos meteorologicos de una estacion específica
-
-leer_estaciones("NH0437","../datos/NH0437.csv")
-
-leer_estaciones("NH0910","../datos/NH0910.csv")
-
-estacion_1 <- leer_estaciones("NH0437","../datos/NH0437.csv")
+```{r, eval = FALSE}
+# Ejemplo de cómo descargar y leer datos de una estación
+estacion_1 <- leer_estaciones("NH0437", "../datos/NH0437.csv")
+estacion_2 <- leer_estaciones("NH0910", "../datos/NH0910.csv")
 ```
 
 ### Resumen de datos meteorológicos
 
 El paquete también ofrece funciones para resumir datos meteorológicos. A continuación, se muestra un ejemplo de como crear un resumen de la temperatura promedio mensual utilizando la función `tabla_resumen_temperatura()`.
 
-```{r}
+```{r, eval = FALSE}
 # Crear un resumen de la temperatura promedio mensual para las estaciones leidas
 
 tabla_resumen_temperatura(estacion_1)
-
-# tabla_resumen_temperatura(estaciones_unidas)
 
 ```
 
@@ -53,12 +47,12 @@ tabla_resumen_temperatura(estacion_1)
 
 El paquete también ofrece funciones para visualizar datos meteorológicos. A continuación, se muestra un ejemplo de como graficar la temperatura mensual utilizando la función `graficar_temperatura_mensual()`.
 
-```{r}
+```{r, eval = FALSE}
 # Graficar la temperatura mensual de una estacion específica
 
-# graficar_temperatura_mensual(estaciones_unidas,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
+graficar_temperatura_mensual(estaciones_1,c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación 1")
 
-# graficar_temperatura_mensual(estaciones_unidas,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
+graficar_temperatura_mensual(estaciones_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 ```
 
 ### Documentación adicional
