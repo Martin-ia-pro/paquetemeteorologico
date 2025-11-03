@@ -23,7 +23,7 @@ sin volver a descargarlo.
 Requiere los paquetes \code{glue}, \code{readr} y \code{cli}.
 }
 \examples{
-leer_estaciones(NH0437,"datos/NH0437.csv")
-leer_estaciones(NH0910,"datos/NH0910.csv")
+leer_estaciones("NH0437","datos/NH0437.csv")
+leer_estaciones("NH0910","datos/NH0910.csv")
 
 }
