@@ -26,18 +26,17 @@ El paquete `paquetemeteorologico` proporciona herramientas para la lectura,manip
 
 El paquete incluye funciones para descargar y leer datos de estaciones meteorológicas A continuación, se muestra un ejemplo de cómo descargar y leer datos meteorológicos utilizando la función `leer_estaciones()`.
 
-```{r, eval = FALSE}
-# Ejemplo de cómo descargar y leer datos de una estación
-estacion_1 <- leer_estaciones("NH0437", "../datos/NH0437.csv")
-estacion_2 <- leer_estaciones("NH0910", "../datos/NH0910.csv")
+```{r, include = FALSE}
+#Definimos rutas temporales para el ejemplo
+ruta_temp1 <- file.path(tempdir(), "NH0437.csv")
+ruta_temp2 <- file.path(tempdir(), "NH0910.csv")
 ```
 
-```{r}
-data("NH0910", package = "paquetemeteorologico")
-data("NH0437", package = "paquetemeteorologico")
 
-estacion_1 <- NH0910
-estacion_2 <- NH0437
+```{r}
+# Ejemplo de cómo descargar y leer datos de una estación
+estacion_1 <- leer_estaciones("NH0437", ruta_temp1)
+estacion_2 <- leer_estaciones("NH0910", ruta_temp2)
 ```
 
 ### Resumen de datos meteorológicos
