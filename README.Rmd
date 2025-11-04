@@ -9,46 +9,50 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+#Definimos rutas temporales para el ejemplo
+ruta_temp1 <- file.path(tempdir(), "NH0437.csv")
+ruta_temp2 <- file.path(tempdir(), "NH0910.csv")
 ```
 
 # paquetemeteorologico
 
-<!-- badges: start -->
+El objetivo del paquete `paquetemeteorologico` es proporcionar herramientas para la lectura, manipulación y visualización de datos de estaciones meteorológicas.Su proposito es facilitar el trabajo de los profesionales de las estaciones meteorologicas. Permite descargar datos, obtener resúmenes estadísticos clave y generar gráficos de tendencias de temperatura mensual.
 
-<!-- badges: end -->
+## Instalacion
 
-El objetivo del paquetemeteorologico
-
-## Installation
-
-You can install the development version of paquetemeteorologico from [GitHub](https://github.com/) with:
+Puedes instalar la versión de desarrollo de `paquetemeteorologico` directamente desde GitHub usando la librería pak:
 
 ``` r
+# Instalar el paquete pak (si no lo tienes)
 # install.packages("pak")
+
 pak::pak("Martin-ia-pro/paquetemeteorologico")
 ```
 
-## Example
+## Ejemplos
 
-This is a basic example which shows you how to solve a common problem:
+Esto es un ejemplo de código básico para usar el paquete. Mostraremos el flujo basico del paquete que incluye descargar datos, obtener un resumen estadistico de los datos y graficar la temperatura mensual.
 
-```{r example}
+Usamos `leer_estaciones()` para obtener los datos de dos estaciones.
+
+```{r ejemplo leer_estaciones}
 library(paquetemeteorologico)
-## basic example code
+# Descargar los datos (usando las rutas temporales/del paquete)
+estacion_1 <- leer_estaciones("NH0437", ruta_temp1)
+estacion_2 <- leer_estaciones("NH0910", ruta_temp2)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Tambien podemos usar `tabla_resumen_temperatura()` para obtener un resumen estadistico que calcula el máximo, mínimo, promedio y desviación estándar de la temperatura para cada estación.
 
-```{r cars}
-summary(cars)
+```{r ejemplo tabla_resumen_temperatura}
+tabla_resumen_temperatura(estacion_1)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Posteriormente podemos utilizar la función `graficar_temperatura_mensual()` para visualizar las tendencias de temperatura mensual.Esta funcion genera un gráfico de líneas para visualizar las tendencias mensuales.
 
-You can also embed plots, for example:
+```{r ejemplo graficar_temperatura_mensual}
+graficar_temperatura_mensual(estacion_1)
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+graficar_temperatura_mensual(estacion_2,color = "blue", titulo = "Temperatura Mensual Estacion 2")
 ```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
