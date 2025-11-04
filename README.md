@@ -1,13 +1,11 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # paquetemeteorologico
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of paquetemeteorologico is to …
+El objetivo del paquetemeteorologico
 
 ## Installation
 
