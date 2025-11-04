@@ -2,6 +2,7 @@
 #'
 #' Calcula un resumen estadístico clave para la columna de temperatura
 #' (`temperatura_abrigo_150cm`) en el conjunto de datos de una o varias estaciones.
+#' Sila estación no es un dataset del paquete se descarga y guarda en la ruta de descarga.
 #'
 #' La tabla de salida incluye la temperatura máxima, mínima, promedio y la
 #' desviación estándar. Los cálculos se agrupan por el identificador de la
@@ -28,7 +29,7 @@
 #' @export
 tabla_resumen_temperatura <- function(estacion) {
   if (is.character(estacion)) {
-    datos_estacion <- readr::read_csv(glue::glue("datos/{estacion}.csv"))
+    datos_estacion <- paquetemeteorologico::leer_estaciones(estacion, glue::glue("datos/{estacion}.csv"))
   } else {
     datos_estacion <- estacion
   }
@@ -39,6 +40,5 @@ tabla_resumen_temperatura <- function(estacion) {
       Max = max(temperatura_abrigo_150cm, na.rm = TRUE),
       Min = min(temperatura_abrigo_150cm, na.rm = TRUE),
       Promedio = mean(temperatura_abrigo_150cm, na.rm = TRUE),
-      Desvio_Estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE)
-    )
+      Desvio_Estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE))
 }

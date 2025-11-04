@@ -65,7 +65,6 @@ graficar_temperatura_mensual(estacion_1,c("green", "blue", "red","yellow","purpl
 graficar_temperatura_mensual(estacion_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 ```
 
-
 ### Documentación adicional
 
 Podes explorar la documentación de cada función en detalle usando la ayuda de R:
