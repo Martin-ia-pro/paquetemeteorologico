@@ -38,18 +38,19 @@ estacion_1 <- leer_estaciones("NH0437", ruta_temp1)
 estacion_2 <- leer_estaciones("NH0910", ruta_temp2)
 ```
 
-### Resumen de datos meteorológicos
+### Resumen y análisis de datos
 
 El paquete también ofrece funciones para resumir datos meteorológicos. A continuación, se muestra un ejemplo de como crear un resumen de la temperatura promedio mensual utilizando la función `tabla_resumen_temperatura()`.
 
 ```{r}
 # Crear un resumen de la temperatura promedio mensual para las estaciones leidas
 
-tabla_resumen_temperatura(estacion_1)
+tabla_resumen_temperatura(estacion_1) |>
+  knitr::kable(caption = "Resumen de temperatura promedio mensual")
 
 ```
 
-### Visualización de datos meteorológicos
+### Visualización de la temperatura mensual
 
 El paquete también ofrece funciones para visualizar datos meteorológicos. A continuación, se muestra un ejemplo de como graficar la temperatura mensual utilizando la función `graficar_temperatura_mensual()`.
 
@@ -63,9 +64,9 @@ graficar_temperatura_mensual(estacion_1,c("green", "blue", "red","yellow","purpl
 graficar_temperatura_mensual(estacion_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 ```
 
-### Documentación adicional
+### Documentación y ayuda
 
-Podes explorar la documentación de cada función en detalle usando la ayuda de R:
+Para más información, consultá la ayuda de cada función mediante:
 
 -   `?leer_estaciones`
 -   `?tabla_resumen_temperatura`
