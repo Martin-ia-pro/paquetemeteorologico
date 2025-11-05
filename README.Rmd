@@ -71,4 +71,5 @@ Posteriormente podemos utilizar la función `graficar_temperatura_mensual()` par
 graficar_temperatura_mensual(estacion_1)
 
 graficar_temperatura_mensual(estacion_2,color = "blue", titulo = "Temperatura Mensual Estacion 2")
+
 ```
