@@ -8,7 +8,6 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/Martin-ia-pro/paquetemeteorologico/graph/badge.svg)](https://app.codecov.io/gh/Martin-ia-pro/paquetemeteorologico)
-[![check-standard](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/check-standard.yaml)
 <!-- badges: end -->
 
 El objetivo del paquete `paquetemeteorologico` es proporcionar
