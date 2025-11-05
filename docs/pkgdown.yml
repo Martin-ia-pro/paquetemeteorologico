@@ -3,4 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   introduccion-al-paquete: introduccion-al-paquete.html
-last_built: 2025-11-05T15:50Z
+last_built: 2025-11-05T16:38Z
+urls:
+  reference: https://martin-ia-pro.github.io/paquetemeteorologico/reference
+  article: https://martin-ia-pro.github.io/paquetemeteorologico/articles
