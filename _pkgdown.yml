@@ -1,4 +1,4 @@
 url: https://martin-ia-pro.github.io/paquetemeteorologico/
 template:
   bootstrap: 5
-
+  logo: man/figures/logo.png
