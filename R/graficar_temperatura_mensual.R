@@ -27,8 +27,7 @@
 #'
 #' @examples
 #' graficar_temperatura_mensual(NH0437,
-#'                              c("green", "blue", "red","yellow","purple"),
-#'                              "Temperatura Promedio Mensual Estación NH0437")
+#'                              c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación NH0437")
 #' graficar_temperatura_mensual(NH0910, ,"Temperatura Promedio Mensual Estación NH0910")
 #' #se puede usar sin poner colores
 #'
