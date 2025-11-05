@@ -25,9 +25,9 @@ Calcula un resumen estadístico clave para la columna de temperatura
 (\code{temperatura_abrigo_150cm}) en el conjunto de datos de una o varias estaciones.
 }
 \details{
-La tabla de salida incluye la temperatura máxima, mínima, promedio y la
-desviación estándar. Los cálculos se agrupan por el identificador de la
-estación (\code{id}).
+La función agrupa los datos por estación (\code{id}) y devuelve una tabla con la
+temperatura máxima, mínima, promedio y desviación estándar. Es útil para
+obtener una visión general del comportamiento de la temperatura en cada estación.
 
 Esta función requiere el paquete \code{dplyr} para la manipulación de datos.
 }
