@@ -2,7 +2,7 @@
 % Please edit documentation in R/leer_estaciones.R
 \name{leer_estaciones}
 \alias{leer_estaciones}
-\title{Descarga y lee los datos de archivos de estaciones meteorológicas}
+\title{Descarga y lectura de datos meteorológicos de una estación}
 \usage{
 leer_estaciones(id_estacion, ruta)
 }
@@ -15,9 +15,9 @@ leer_estaciones(id_estacion, ruta)
 Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
 }
 \description{
-Descarga un archivo formato CSV con  datos de una estación meteorológica
-específica y lo guarda en una ruta local. Si el archivo ya existe en la ruta especificada, la función lo lee directamente
-sin volver a descargarlo.
+Esta función descarga (si es necesario) y lee los datos de una estación meteorológica
+específica en formato CSV. Si el archivo ya existe en la ruta indicada, se utiliza el
+archivo local sin volver a descargarlo.
 }
 \details{
 Requiere los paquetes \code{glue}, \code{readr} y \code{cli}.

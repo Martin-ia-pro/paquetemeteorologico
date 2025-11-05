@@ -1,15 +1,15 @@
-#' Descarga y lee los datos de archivos de estaciones meteorológicas
+#' Descarga y lectura de datos meteorológicos de una estación
 #'
-#' Descarga un archivo formato CSV con  datos de una estación meteorológica
-#' específica y lo guarda en una ruta local. Si el archivo ya existe en la ruta especificada, la función lo lee directamente
-#' sin volver a descargarlo.
+#' Esta función descarga (si es necesario) y lee los datos de una estación meteorológica
+#' específica en formato CSV. Si el archivo ya existe en la ruta indicada, se utiliza el
+#' archivo local sin volver a descargarlo.
 #'
 #' Requiere los paquetes `glue`, `readr` y `cli`.
 #'
 #' @param id_estacion ID de la estación cuyos datos se quieren leer.
 #' @param ruta Ruta o directorio en donde se descargarán y leerán los datos
 #'
-#' @returns Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
+#' @return Los datos en formato CSV para poder almacenarlos en una variable y utilizarlos posteriormente.
 #'
 #' @examples
 #' \dontshow{
