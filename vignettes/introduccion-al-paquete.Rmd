@@ -32,7 +32,6 @@ ruta_temp1 <- file.path(tempdir(), "NH0437.csv")
 ruta_temp2 <- file.path(tempdir(), "NH0910.csv")
 ```
 
-
 ```{r}
 # Ejemplo de cómo descargar y leer datos de una estación
 estacion_1 <- leer_estaciones("NH0437", ruta_temp1)
@@ -63,7 +62,6 @@ graficar_temperatura_mensual(estacion_1,c("green", "blue", "red","yellow","purpl
 ```{r}
 graficar_temperatura_mensual(estacion_2,c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación de Argentina-Rosario")
 ```
-
 
 ### Documentación adicional
 
