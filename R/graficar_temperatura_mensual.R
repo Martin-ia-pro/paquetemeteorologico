@@ -26,8 +26,11 @@
 #'   ser impreso o guardado.
 #'
 #' @examples
-#' graficar_temperatura_mensual(NH0437, c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación NH0437")
-#' graficar_temperatura_mensual(NH0910, c("purple", "pink", "lightblue","orange","brown"),"Temperatura Promedio Mensual Estación NH0910")
+#' graficar_temperatura_mensual(NH0437,
+#'                              c("green", "blue", "red","yellow","purple"),
+#'                              "Temperatura Promedio Mensual Estación NH0437")
+#' graficar_temperatura_mensual(NH0910, ,"Temperatura Promedio Mensual Estación NH0910")
+#' #se puede usar sin poner colores
 #'
 #' @export
 graficar_temperatura_mensual <- function(datos, colores = c("green", "blue", "red","yellow","purple"), titulo = "Temperatura Mensual"){
