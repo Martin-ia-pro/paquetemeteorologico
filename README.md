@@ -1,5 +1,5 @@
 
-# paquetemeteorologico
+# paquetemeteorologico <img src="man/figures/logo.png" align="right" height="120" />
 
 <!-- badges: start -->
 
