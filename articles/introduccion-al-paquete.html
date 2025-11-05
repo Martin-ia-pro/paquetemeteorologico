@@ -120,7 +120,7 @@ descargar y leer datos meteorológicos utilizando la función
 <span><span class="co">#&gt; Lectura completada. El dataset tiene 15553 filas y 35 columnas.</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="resumen-de-datos-meteorológicos">Resumen de datos meteorológicos<a class="anchor" aria-label="anchor" href="#resumen-de-datos-meteorol%C3%B3gicos"></a>
+<h3 id="resumen-y-análisis-de-datos">Resumen y análisis de datos<a class="anchor" aria-label="anchor" href="#resumen-y-an%C3%A1lisis-de-datos"></a>
 </h3>
 <p>El paquete también ofrece funciones para resumir datos
 meteorológicos. A continuación, se muestra un ejemplo de como crear un
@@ -129,14 +129,28 @@ resumen de la temperatura promedio mensual utilizando la función
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Crear un resumen de la temperatura promedio mensual para las estaciones leidas</span></span>
 <span></span>
-<span><span class="fu"><a href="../reference/tabla_resumen_temperatura.html">tabla_resumen_temperatura</a></span><span class="op">(</span><span class="va">estacion_1</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 5</span></span></span>
-<span><span class="co">#&gt;   id       Max   Min Promedio Desvio_Estandar</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> NH0437  36.3   2.1     20.2            5.77</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/tabla_resumen_temperatura.html">tabla_resumen_temperatura</a></span><span class="op">(</span><span class="va">estacion_1</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Resumen de temperatura promedio mensual"</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Resumen de temperatura promedio mensual</caption>
+<thead><tr class="header">
+<th align="left">id</th>
+<th align="right">Max</th>
+<th align="right">Min</th>
+<th align="right">Promedio</th>
+<th align="right">Desvio_Estandar</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">NH0437</td>
+<td align="right">36.3</td>
+<td align="right">2.1</td>
+<td align="right">20.23105</td>
+<td align="right">5.77252</td>
+</tr></tbody>
+</table>
 </div>
 <div class="section level3">
-<h3 id="visualización-de-datos-meteorológicos">Visualización de datos meteorológicos<a class="anchor" aria-label="anchor" href="#visualizaci%C3%B3n-de-datos-meteorol%C3%B3gicos"></a>
+<h3 id="visualización-de-la-temperatura-mensual">Visualización de la temperatura mensual<a class="anchor" aria-label="anchor" href="#visualizaci%C3%B3n-de-la-temperatura-mensual"></a>
 </h3>
 <p>El paquete también ofrece funciones para visualizar datos
 meteorológicos. A continuación, se muestra un ejemplo de como graficar
@@ -160,10 +174,9 @@ la temperatura mensual utilizando la función
 <p><img src="introduccion-al-paquete_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
 </div>
 <div class="section level3">
-<h3 id="documentación-adicional">Documentación adicional<a class="anchor" aria-label="anchor" href="#documentaci%C3%B3n-adicional"></a>
+<h3 id="documentación-y-ayuda">Documentación y ayuda<a class="anchor" aria-label="anchor" href="#documentaci%C3%B3n-y-ayuda"></a>
 </h3>
-<p>Podes explorar la documentación de cada función en detalle usando la
-ayuda de R:</p>
+<p>Para más información, consultá la ayuda de cada función mediante:</p>
 <ul>
 <li><code><a href="../reference/leer_estaciones.html">?leer_estaciones</a></code></li>
 <li><code><a href="../reference/tabla_resumen_temperatura.html">?tabla_resumen_temperatura</a></code></li>
