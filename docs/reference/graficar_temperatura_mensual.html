@@ -90,15 +90,17 @@ manejo de fechas) y <code>ggplot2</code> (para la creación del gráfico).</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">graficar_temperatura_mensual</span><span class="op">(</span><span class="va">NH0437</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"green"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>,<span class="st">"yellow"</span>,<span class="st">"purple"</span><span class="op">)</span>,<span class="st">"Temperatura Promedio Mensual Estación NH0437"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">graficar_temperatura_mensual</span><span class="op">(</span><span class="va">NH0437</span>,</span></span>
+<span class="r-in"><span>                             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"green"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>,<span class="st">"yellow"</span>,<span class="st">"purple"</span><span class="op">)</span>,<span class="st">"Temperatura Promedio Mensual Estación NH0437"</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Please use `linewidth` instead.</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> The deprecated feature was likely used in the <span style="color: #0000BB;">paquetemeteorologico</span> package.</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span>   Please report the issue at</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span>   <span style="color: #0000BB; font-style: italic;">&lt;</span><a href="https://github.com/Martin-ia-pro/paquetemeteorologico/issues" class="external-link"><span style="color: #0000BB; font-style: italic;">https://github.com/Martin-ia-pro/paquetemeteorologico/issues</span></a><span style="color: #0000BB; font-style: italic;">&gt;</span>.</span>
 <span class="r-plt img"><img src="graficar_temperatura_mensual-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu">graficar_temperatura_mensual</span><span class="op">(</span><span class="va">NH0910</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"purple"</span>, <span class="st">"pink"</span>, <span class="st">"lightblue"</span>,<span class="st">"orange"</span>,<span class="st">"brown"</span><span class="op">)</span>,<span class="st">"Temperatura Promedio Mensual Estación NH0910"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">graficar_temperatura_mensual</span><span class="op">(</span><span class="va">NH0910</span>, ,<span class="st">"Temperatura Promedio Mensual Estación NH0910"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="graficar_temperatura_mensual-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="co">#se puede usar sin poner colores</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
