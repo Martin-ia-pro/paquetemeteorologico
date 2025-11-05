@@ -107,11 +107,11 @@ graficar_temperatura_mensual(estacion_1)
 #> generated.
 ```
 
-<img src="man/figures/README-ejemplo graficar_temperatura_mensual-1.png" width="100%" />
+<img src="man/figures/README-ejemplo-graficar_temperatura_mensual-1.png" width="100%" />
 
 ``` r
 
 graficar_temperatura_mensual(estacion_2,color = "blue", titulo = "Temperatura Mensual Estacion 2")
 ```
 
-<img src="man/figures/README-ejemplo graficar_temperatura_mensual-2.png" width="100%" />
+<img src="man/figures/README-ejemplo-graficar_temperatura_mensual-2.png" width="100%" />

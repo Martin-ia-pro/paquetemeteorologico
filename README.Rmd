@@ -56,13 +56,13 @@ estacion_2 <- leer_estaciones("NH0910", ruta_temp2)
 
 Tambien podemos usar `tabla_resumen_temperatura()` para obtener un resumen estadistico que calcula el máximo, mínimo, promedio y desviación estándar de la temperatura para cada estación.
 
-```{r ejemplo tabla_resumen_temperatura}
+```{r ejemplo-tabla_resumen_temperatura}
 tabla_resumen_temperatura(estacion_1)
 ```
 
 Posteriormente podemos utilizar la función `graficar_temperatura_mensual()` para visualizar las tendencias de temperatura mensual.Esta funcion genera un gráfico de líneas para visualizar las tendencias mensuales.
 
-```{r ejemplo graficar_temperatura_mensual}
+```{r ejemplo-graficar_temperatura_mensual}
 graficar_temperatura_mensual(estacion_1)
 
 graficar_temperatura_mensual(estacion_2,color = "blue", titulo = "Temperatura Mensual Estacion 2")
