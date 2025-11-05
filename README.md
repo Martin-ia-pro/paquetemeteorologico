@@ -3,10 +3,23 @@
 
 El objetivo del paquete `paquetemeteorologico` es proporcionar
 herramientas para la lectura, manipulación y visualización de datos de
-estaciones meteorológicas.Su proposito es facilitar el trabajo de los
+estaciones meteorológicas. Su proposito es facilitar el trabajo de los
 profesionales de las estaciones meteorologicas. Permite descargar datos,
 obtener resúmenes estadísticos clave y generar gráficos de tendencias de
 temperatura mensual.
+
+## Autores
+
+El desarrollo y mantenimiento del `paquetemeteorologico` ha sido
+realizado por:
+
+- **Juan Martín Bongiovanni** (Autor, Mantenedor)
+  - GitHub: [Martin-ia-pro](https://github.com/Martin-ia-pro)
+- **Lisandro Nicolas Seghezzo Prieri** (Autor)
+  - GitHub:
+    [LisandroSeghezzo2003](https://github.com/LisandroSeghezzo2003)
+
+------------------------------------------------------------------------
 
 ## Instalacion
 
