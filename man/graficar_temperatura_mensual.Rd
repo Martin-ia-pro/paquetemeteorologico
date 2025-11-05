@@ -26,12 +26,11 @@ con cinco colores.}
 título principal del gráfico generado.Por defecto, es "Temperatura Mensual".}
 }
 \value{
-Un objeto de la clase \code{ggplot} que representa
-el gráfico de líneas de la temperatura promedio mensual. Este objeto puede
-ser impreso o guardado.
+Un objeto de la clase \code{ggplot} que representa el gráfico de líneas de la temperatura promedio mensual.
+Este objeto puede ser impreso o guardado.
 }
 \description{
-Genera un gráfico de líneas (ggplot2) que visualiza la temperatura promedio
+Genera un gráfico de líneas (ggplot2) que permite visualizar la evolucion de la temperatura promedio
 mensual a partir del conjunto de datos de estaciones meteorológicas proporcionados.
 }
 \details{
@@ -43,7 +42,8 @@ manejo de fechas) y \code{ggplot2} (para la creación del gráfico).
 }
 \examples{
 graficar_temperatura_mensual(NH0437,
-                             c("green", "blue", "red","yellow","purple"),"Temperatura Promedio Mensual Estación NH0437")
+                             c("green", "blue", "red","yellow","purple"),
+                             "Temperatura Promedio Mensual Estación NH0437")
 graficar_temperatura_mensual(NH0910, ,"Temperatura Promedio Mensual Estación NH0910")
 #se puede usar sin poner colores
 
