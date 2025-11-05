@@ -1,6 +1,16 @@
 
 # paquetemeteorologico
 
+<!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/Martin-ia-pro/paquetemeteorologico/graph/badge.svg)](https://app.codecov.io/gh/Martin-ia-pro/paquetemeteorologico)
+[![check-standard](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/Martin-ia-pro/paquetemeteorologico/actions/workflows/check-standard.yaml)
+<!-- badges: end -->
+
 El objetivo del paquete `paquetemeteorologico` es proporcionar
 herramientas para la lectura, manipulación y visualización de datos de
 estaciones meteorológicas. Su proposito es facilitar el trabajo de los
