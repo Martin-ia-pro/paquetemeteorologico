@@ -22,18 +22,20 @@
 #'   `id`, `Max`, `Min`, `Promedio`, y `Desvio_Estandar`.
 #'
 #' @examples
-#' tabla_resumen_temperatura("NH0437")
-#' tabla_resumen_temperatura("NH0910")
+#' \dontshow{
+#' ruta_temp1 <- file.path(tempdir(), "NH0437.csv")
+#' ruta_temp2 <- file.path(tempdir(), "NH0910.csv")
+#'
+#' NH0437 <- leer_estaciones("NH0437", ruta_temp1)
+#' NH0910 <- leer_estaciones("NH0910", ruta_temp2)
+#' }
+#'
+#' tabla_resumen_temperatura(NH0437)
+#' tabla_resumen_temperatura(NH0910)
 #'
 #' @export
 tabla_resumen_temperatura <- function(estacion) {
-  if (is.character(estacion)) {
-    datos_estacion <- readr::read_csv(glue::glue("datos/{estacion}.csv"))
-  } else {
-    datos_estacion <- estacion
-  }
-
-  datos_estacion |>
+ estacion |>
     dplyr::group_by(id) |>
     dplyr::summarise(
       Max = max(temperatura_abrigo_150cm, na.rm = TRUE),

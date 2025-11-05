@@ -32,7 +32,15 @@ estación (\code{id}).
 Esta función requiere el paquete \code{dplyr} para la manipulación de datos.
 }
 \examples{
-tabla_resumen_temperatura("NH0437")
-tabla_resumen_temperatura("NH0910")
+\dontshow{
+ruta_temp1 <- file.path(tempdir(), "NH0437.csv")
+ruta_temp2 <- file.path(tempdir(), "NH0910.csv")
+
+NH0437 <- leer_estaciones("NH0437", ruta_temp1)
+NH0910 <- leer_estaciones("NH0910", ruta_temp2)
+}
+
+tabla_resumen_temperatura(NH0437)
+tabla_resumen_temperatura(NH0910)
 
 }
