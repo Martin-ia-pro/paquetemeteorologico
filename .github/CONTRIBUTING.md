@@ -10,28 +10,26 @@ Puedes corregir errores tipográficos, ortográficos o gramaticales en la docume
 
 Si quieres realizar un cambio importante, es recomendable que primero abras un ticket y te asegures de que alguien del equipo esté de acuerdo en que es necesario. Si has encontrado un error, abre un ticket que lo describa con un [ejemplo reproducible mínimo](https://tidyverse.org/help/#reprex) (esto también te ayudará a escribir una prueba unitaria, si fuera necesario). Consulta nuestra guía sobre [cómo crear un buen ticket](https://code-review.tidyverse.org/issues/) para obtener más información.
 
-Proceso de solicitud de extracción
+## Proceso de solicitud de extracción
 
-Haga un fork del paquete y clónelo en su computadora. Si no lo ha hecho antes, le recomendamos usar...
+-   Haga un fork del paquete y clónelo en su computadora. Si no lo ha hecho antes, le recomendamos usar `usethis::create_from_github("Martin-ia-pro/paquetemeteorologico", fork = TRUE)`.
 
--    `usethis::create_from_github("Martin-ia-pro/paquetemeteorologico", fork = TRUE)`.
+-   Instala todas las dependencias de desarrollo con `devtools::install_dev_deps()` y, a continuación, asegúrate de que el paquete supera la comprobación de R CMD ejecutando `devtools::check()`. Si la comprobación de R CMD no se supera correctamente, es recomendable pedir ayuda antes de continuar.
 
--   Install all development dependencies with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. If R CMD check doesn't pass cleanly, it's a good idea to ask for help before continuing.
+-   Crea una rama de Git para tu solicitud de extracción (PR). Recomendamos usar `usethis::pr_init(``"brief-description-of-change"``)`.
 
--   Create a Git branch for your pull request (PR). We recommend using `usethis::pr_init("brief-description-of-change")`.
+-   Realiza los cambios, confirma los cambios en Git y luego crea una PR ejecutando `usethis::pr_push()` y siguiendo las instrucciones en tu navegador. El título de tu PR debe describir brevemente el cambio. El cuerpo de tu PR debe contener: `Fixes #issue-number`
 
--   Make your changes, commit to git, and then create a PR by running `usethis::pr_push()`, and following the prompts in your browser. The title of your PR should briefly describe the change. The body of your PR should contain `Fixes #issue-number`.
+-   Para los cambios visibles para el usuario, agregue una viñeta en la parte superior de NEWS.md (es decir, justo debajo del primer encabezado). Siga el estilo descrito en <https://style.tidyverse.org/news.html>.
 
--   For user-facing changes, add a bullet to the top of `NEWS.md` (i.e. just below the first header). Follow the style described in <https://style.tidyverse.org/news.html>.
+## Estilo de código
 
-### Code style
+-   El código nuevo debe seguir la [guía de estilo](https://style.tidyverse.org/) de tidyverse. Puedes usar [Air](https://posit-dev.github.io/air/) para aplicar este estilo, pero por favor, no modifiques el estilo del código que no esté relacionado con tu solicitud de extracción.
 
--   New code should follow the tidyverse [style guide](https://style.tidyverse.org). You can use [Air](https://posit-dev.github.io/air/) to apply this style, but please don't restyle code that has nothing to do with your PR.
+-   Usamos [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html), con [sintaxis Markdown](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), para la documentación.
 
--   We use [roxygen2](https://cran.r-project.org/package=roxygen2), with [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), for documentation.
+-   Usamos [testthat](https://cran.r-project.org/web/packages/testthat/index.html) para las pruebas unitarias. Las contribuciones con casos de prueba incluidos son más fáciles de aceptar.
 
--   We use [testthat](https://cran.r-project.org/package=testthat) for unit tests. Contributions with test cases included are easier to accept.
+## Código de Conducta
 
-## Code of Conduct
-
-Please note that the paquetemeteorologico project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Ten en cuenta que el proyecto paquetemeteorologico se publica con un Código de Conducta para Colaboradores. Al contribuir a este proyecto, aceptas cumplir con sus términos.
