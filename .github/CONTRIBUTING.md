@@ -16,7 +16,7 @@ Si quieres realizar un cambio importante, es recomendable que primero abras un t
 
 -   Instala todas las dependencias de desarrollo con `devtools::install_dev_deps()` y, a continuación, asegúrate de que el paquete supera la comprobación de R CMD ejecutando `devtools::check()`. Si la comprobación de R CMD no se supera correctamente, es recomendable pedir ayuda antes de continuar.
 
--   Crea una rama de Git para tu solicitud de extracción (PR). Recomendamos usar `usethis::pr_init(``"brief-description-of-change"``)`.
+-   Crea una rama de Git para tu solicitud de extracción (PR). Recomendamos usar ``` usethis::pr_init(``"brief-description-of-change"``) ```.
 
 -   Realiza los cambios, confirma los cambios en Git y luego crea una PR ejecutando `usethis::pr_push()` y siguiendo las instrucciones en tu navegador. El título de tu PR debe describir brevemente el cambio. El cuerpo de tu PR debe contener: `Fixes #issue-number`
 
