@@ -1,18 +1,20 @@
-# Contributing to paquetemeteorologico
+# Contribuciones a paquetemeteorologico
 
-This outlines how to propose a change to paquetemeteorologico. For a detailed discussion on contributing to this and other tidyverse packages, please see the [development contributing guide](https://rstd.io/tidy-contrib) and our [code review principles](https://code-review.tidyverse.org/).
+Esta guía describe cómo proponer cambios a paquetemeteorologico. Para obtener información detallada sobre cómo contribuir a este y otros paquetes de tidyverse, consulte la [guía de contribución para desarrolladores](https://tidyverse.org/contribute/) y nuestros [principios de revisión de código](https://code-review.tidyverse.org/).
 
-## Fixing typos
+## Corrección de errores tipográficos
 
-You can fix typos, spelling mistakes, or grammatical errors in the documentation directly using the GitHub web interface, as long as the changes are made in the *source* file. This generally means you'll need to edit [roxygen2 comments](https://roxygen2.r-lib.org/articles/roxygen2.html) in an `.R`, not a `.Rd` file. You can find the `.R` file that generates the `.Rd` by reading the comment in the first line.
+Puedes corregir errores tipográficos, ortográficos o gramaticales en la documentación directamente mediante la interfaz web de GitHub, siempre que los cambios se realicen en el archivo fuente. Esto generalmente significa que tendrás que editar los [comentarios de roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) en un archivo `.R`, no en un archivo `.Rd`. Puedes encontrar el archivo .R que genera el archivo `.Rd` leyendo el comentario de la primera línea.
 
-## Bigger changes
+## Cambios importantes
 
-If you want to make a bigger change, it's a good idea to first file an issue and make sure someone from the team agrees that it’s needed. If you’ve found a bug, please file an issue that illustrates the bug with a minimal [reprex](https://www.tidyverse.org/help/#reprex) (this will also help you write a unit test, if needed). See our guide on [how to create a great issue](https://code-review.tidyverse.org/issues/) for more advice.
+Si quieres realizar un cambio importante, es recomendable que primero abras un ticket y te asegures de que alguien del equipo esté de acuerdo en que es necesario. Si has encontrado un error, abre un ticket que lo describa con un [ejemplo reproducible mínimo](https://tidyverse.org/help/#reprex) (esto también te ayudará a escribir una prueba unitaria, si fuera necesario). Consulta nuestra guía sobre [cómo crear un buen ticket](https://code-review.tidyverse.org/issues/) para obtener más información.
 
-### Pull request process
+Proceso de solicitud de extracción
 
--   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("Martin-ia-pro/paquetemeteorologico", fork = TRUE)`.
+Haga un fork del paquete y clónelo en su computadora. Si no lo ha hecho antes, le recomendamos usar...
+
+-    `usethis::create_from_github("Martin-ia-pro/paquetemeteorologico", fork = TRUE)`.
 
 -   Install all development dependencies with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. If R CMD check doesn't pass cleanly, it's a good idea to ask for help before continuing.
 
